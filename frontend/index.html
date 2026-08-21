@@ -42,7 +42,7 @@
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            z-index: -1; 
+            z-index: 0; 
             pointer-events: none; 
         }
 
@@ -122,6 +122,8 @@
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            position: relative; /* <--- ADD THIS */
+    z-index: 10; /* <--- ADD THIS */
         }
 
         h1 {
