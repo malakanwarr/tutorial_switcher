@@ -239,15 +239,22 @@
         }
 
         /* --- MOBILE RESPONSIVENESS --- */
-        @media (max-width: 600px) {
-            .row {
-                flex-direction: column;
-                gap: 0px;
-            }
-            .row .form-group {
-                margin-bottom: 20px;
-            }
-        }
+@media (max-width: 600px) {
+    .container {
+        width: 85%; /* Brings the edges inward to show the background */
+        padding: 25px 20px; /* Shrinks the bulky inner spacing */
+    }
+    h1 {
+        font-size: 1.8rem; /* Scales down the title slightly to fit */
+    }
+    .row {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .row .form-group {
+        margin-bottom: 20px;
+    }
+}
     </style>
 </head>
 <body>
