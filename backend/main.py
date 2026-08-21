@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional
-from backend.db import get_db_connection  
+from db import get_db_connection  
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 
