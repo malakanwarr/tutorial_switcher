@@ -15,12 +15,13 @@
             --text-muted: #94a3b8;
         }
 
-html {
+        html {
     background-color: #272e3f;
 }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, rgba(15,23,42,0.9) 0%, rgba(30,27,75,0.9) 100%);
+            background: linear-gradient(135deg, #272e3f 0%, #36335a 100%);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -41,7 +42,7 @@ html {
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            z-index: -1; 
+            z-index: 0; 
             pointer-events: none; 
         }
 
@@ -120,6 +121,8 @@ html {
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            position: relative; /* <--- ADD THIS */
+    z-index: 10; /* <--- ADD THIS */
         }
 
         h1 {
