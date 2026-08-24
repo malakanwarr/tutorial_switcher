@@ -52,7 +52,25 @@ def register_student(request: SwitchRequest):
     cursor = conn.cursor()
 
     try:
-        # 1. The UPSERT. If the student_id already exists, update their data!
+        # 1. THE BOUNCER: Check for duplicates before doing anything else
+        cursor.execute("""
+            SELECT student_id, university_email, whatsapp_number 
+            FROM students 
+            WHERE student_id = %s OR university_email = %s OR whatsapp_number = %s
+        """, (request.student_id, request.university_email, request.whatsapp_number))
+        
+        existing_student = cursor.fetchone()
+
+        if existing_student:
+            db_id, db_email, db_phone = existing_student
+            if db_id == request.student_id:
+                raise ValueError("This Student ID is already registered! Use the Status page to update your preferences.")
+            if db_email.lower() == request.university_email.lower():
+                raise ValueError("This email is already in use by another student.")
+            if db_phone == request.whatsapp_number:
+                raise ValueError("This WhatsApp number is already registered.")
+
+        # 2. THE INSERT: Now a strict, standard insert without the UPSERT backdoor
         cursor.execute("""
             INSERT INTO students (
                 student_id, whatsapp_number, university_email, major, 
@@ -60,27 +78,16 @@ def register_student(request: SwitchRequest):
                 english_level, german_level
             )
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (student_id) DO UPDATE SET
-                whatsapp_number = EXCLUDED.whatsapp_number,
-                university_email = EXCLUDED.university_email,
-                major = EXCLUDED.major,
-                semester = EXCLUDED.semester,
-                batch = EXCLUDED.batch,
-                current_tutorial = EXCLUDED.current_tutorial,
-                requires_lang_match = EXCLUDED.requires_lang_match,
-                english_level = EXCLUDED.english_level,
-                german_level = EXCLUDED.german_level,
-                is_matched = FALSE;
         """, (
             request.student_id, request.whatsapp_number, request.university_email, 
             request.major, request.semester, request.batch, request.current_tutorial, 
             request.requires_lang_match, request.english_level, request.german_level
         ))
 
-        # 2. Delete their old desired slots before adding new ones
+        # 3. Delete any old desired slots (just a safety precaution)
         cursor.execute("DELETE FROM desired_slots WHERE student_id = %s", (request.student_id,))
 
-        # 3. Enumerate! This automatically numbers their choices (1, 2, 3...)
+        # 4. Enumerate and save choices
         for priority_index, target_tutorial in enumerate(request.desired_tutorials):
             cursor.execute("""
                 INSERT INTO desired_slots (student_id, tutorial_id, priority)
@@ -88,10 +95,11 @@ def register_student(request: SwitchRequest):
             """, (request.student_id, target_tutorial, priority_index + 1)) 
 
         conn.commit()
-        return {"status": "success", "message": f"Student {request.student_id} successfully saved/updated!"}
+        return {"status": "success", "message": f"Student {request.student_id} successfully saved!"}
 
     except Exception as e:
         conn.rollback()
+        # This catches our ValueError and sends it safely to the frontend!
         raise HTTPException(status_code=400, detail=str(e))
     finally:
         cursor.close()
