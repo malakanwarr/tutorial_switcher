@@ -184,17 +184,23 @@ def run_matching_engine():
         emails_to_send = []
         
         for match in matches:
-            match_group_id = f"GROUP-{str(uuid.uuid4())[:8]}" # Unique ID for this specific 2-way or 3-way trade
+            match_group_id = f"GROUP-{str(uuid.uuid4())[:8]}" # Unique ID for this specific trade
+            cycle = match["student_ids"]
+            cycle_length = len(cycle)
             
-            for sid in match["student_ids"]:
+            for idx, sid in enumerate(cycle):
                 # Find the student's full data
                 student_info = next(s for s in students_data if s["student_id"] == sid)
                 
-                # Get the partner's info (who they are taking the slot from)
-                partner_slot = match["slot_assignment"][sid]
-                partner_info = next(s for s in students_data if s["current_tutorial"] == partner_slot and s["student_id"] in match["student_ids"])
+                # THE GIVER: The person giving this student their desired tutorial (next in the cycle)
+                giver_id = cycle[(idx + 1) % cycle_length]
+                giver_info = next(s for s in students_data if s["student_id"] == giver_id)
                 
-                # Generate their personal secure token
+                # THE TAKER: The person taking this student's current tutorial (previous in the cycle)
+                taker_id = cycle[(idx - 1) % cycle_length]
+                taker_info = next(s for s in students_data if s["student_id"] == taker_id)
+                
+                partner_slot = match["slot_assignment"][sid]
                 personal_token = str(uuid.uuid4())
                 
                 # Save to database
@@ -203,14 +209,16 @@ def run_matching_engine():
                     VALUES (%s, %s, %s, 'pending')
                 """, (match_group_id, sid, personal_token))
                 
-                # Mark as matched so they aren't pulled again tomorrow
+                # Mark as matched so they aren't pulled again
                 cursor.execute("UPDATE students SET is_matched = TRUE WHERE student_id = %s", (sid,))
                 
-                # Queue the email
+                # Queue the email with the new dynamic data
                 emails_to_send.append({
                     "student_email": student_info["email"],
                     "student_id": sid,
-                    "partner_whatsapp": partner_info["whatsapp"],
+                    "cycle_length": cycle_length,
+                    "giver_whatsapp": giver_info["whatsapp"],
+                    "taker_whatsapp": taker_info["whatsapp"],
                     "my_slot": student_info["current_tutorial"],
                     "partner_slot": partner_slot,
                     "token": personal_token

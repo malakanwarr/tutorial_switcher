@@ -36,6 +36,25 @@ def send_match_emails(matches_data):
         msg["From"] = SENDER_EMAIL
         msg["To"] = recipient
 
+        # Dynamic WhatsApp section based on the type of swap
+        if match['cycle_length'] == 2:
+            whatsapp_section = f"""
+            <p style="font-size: 16px;"><strong>Your Match's WhatsApp:</strong> <a href="https://wa.me/{match['giver_whatsapp'].replace('+', '')}" style="color: #6366f1; text-decoration: none; font-weight: bold;">{match['giver_whatsapp']}</a></p>
+            <p style="font-size: 14px; color: #64748b;"><strong>IMPORTANT:</strong> Message your partner on WhatsApp to confirm.</p>
+            """
+        else:
+            whatsapp_section = f"""
+            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 15px; margin: 20px 0;">
+                <p style="margin-top: 0; font-size: 15px; font-weight: bold; color: #b45309;">🔄 Multi-Way Switch!</p>
+                <p style="font-size: 14px; color: #b45309;">This is a multi-way swap. You need to coordinate with two different people to complete the drop/add:</p>
+                <ol style="font-size: 14px; color: #b45309; padding-left: 20px; line-height: 1.5;">
+                    <li><strong>Contact the person GIVING you Tutorial {match['partner_slot']}:</strong> <br><a href="https://wa.me/{match['giver_whatsapp'].replace('+', '')}" style="font-weight: bold; color: #b45309;">{match['giver_whatsapp']}</a></li>
+                    <li style="margin-top: 10px;"><strong>Contact the person TAKING your Tutorial {match['my_slot']}:</strong> <br><a href="https://wa.me/{match['taker_whatsapp'].replace('+', '')}" style="font-weight: bold; color: #b45309;">{match['taker_whatsapp']}</a></li>
+                </ol>
+            </div>
+            <p style="font-size: 14px; color: #64748b;"><strong>IMPORTANT:</strong> Message both students to confirm.</p>
+            """
+
         # Beautiful HTML Email Template with Buttons
         html_body = f"""
         <html>
@@ -53,16 +72,14 @@ def send_match_emails(matches_data):
                   <p style="margin: 5px 0;"><strong>Your current tutorial:</strong> {match['my_slot']}</p>
                 </div>
                 
-                <p style="font-size: 16px;"><strong>Your Match's WhatsApp:</strong> <a href="https://wa.me/{match['partner_whatsapp'].replace('+', '')}" style="color: #6366f1; text-decoration: none; font-weight: bold;">{match['partner_whatsapp']}</a></p>
+                {whatsapp_section}
                 
-                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 25px 0;">
-                
-                <p style="font-size: 14px; color: #64748b;"><strong>IMPORTANT:</strong> Message your partner on WhatsApp to confirm. Once you both agree, please update the system using the buttons below:</p>
+                <p style="font-size: 14px; color: #64748b;">Once everyone agrees, please update the system using the buttons below:</p>
                 
                 <div style="text-align: center; margin-top: 25px;">
                   <a href="https://tutorial-switcher.vercel.app/confirm-swap?token={match['token']}" style="background-color: #4ade80; color: white; padding: 14px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; margin-bottom: 10px; width: 80%; box-sizing: border-box;">✅ Swap Successful (Done)</a>
-<br>
-<a href="https://tutorial-switcher.vercel.app/flake-swap?token={match['token']}" style="background-color: #f87171; color: white; padding: 14px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; width: 80%; box-sizing: border-box;">❌ Partner Flaked (Cancel)</a>
+                  <br>
+                  <a href="https://tutorial-switcher.vercel.app/flake-swap?token={match['token']}" style="background-color: #f87171; color: white; padding: 14px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; width: 80%; box-sizing: border-box;">❌ Partner Flaked (Cancel)</a>
                 </div>
               </div>
             </div>
