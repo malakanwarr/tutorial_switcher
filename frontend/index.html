@@ -205,6 +205,33 @@
             text-align: center;
             font-weight: 500;
         }
+
+        .status-link-container {
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+.status-badge {
+    display: inline-block;
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc; 
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    transition: all 0.2s ease;
+}
+
+.status-badge:hover {
+    background: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+    color: #ffffff;
+}
+
        /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 600px) {
     .container {
@@ -273,9 +300,9 @@
     <div class="container">
         <h1>GUC Tutorial Switcher 🚀</h1>
         
-        <p style="text-align: center; margin-top: -20px; margin-bottom: 30px;">
-            Already registered? <a href="status.html" style="color: #818cf8; text-decoration: none; font-weight: bold;">Check your status here.</a>
-        </p>
+        <div class="status-link-container">
+    <a href="status.html" class="status-badge">🔍 Already registered? Check your status here ➔</a>
+</div>
 
         <form id="swap-form">
             <div class="form-group">
