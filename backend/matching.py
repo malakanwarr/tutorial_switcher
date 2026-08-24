@@ -180,7 +180,7 @@ def run_matching_engine():
             
         print(f"Found {len(matches)} successful match loops!")
 
-        # 4. Process each match loop
+       # 4. Process each match loop
         emails_to_send = []
         
         for match in matches:
@@ -189,17 +189,7 @@ def run_matching_engine():
             cycle_length = len(cycle)
             
             for idx, sid in enumerate(cycle):
-                # Find the student's full data
                 student_info = next(s for s in students_data if s["student_id"] == sid)
-                
-                # THE GIVER: The person giving this student their desired tutorial (next in the cycle)
-                giver_id = cycle[(idx + 1) % cycle_length]
-                giver_info = next(s for s in students_data if s["student_id"] == giver_id)
-                
-                # THE TAKER: The person taking this student's current tutorial (previous in the cycle)
-                taker_id = cycle[(idx - 1) % cycle_length]
-                taker_info = next(s for s in students_data if s["student_id"] == taker_id)
-                
                 partner_slot = match["slot_assignment"][sid]
                 personal_token = str(uuid.uuid4())
                 
@@ -209,20 +199,56 @@ def run_matching_engine():
                     VALUES (%s, %s, %s, 'pending')
                 """, (match_group_id, sid, personal_token))
                 
-                # Mark as matched so they aren't pulled again
+                # Mark as matched
                 cursor.execute("UPDATE students SET is_matched = TRUE WHERE student_id = %s", (sid,))
                 
-                # Queue the email with the new dynamic data
-                emails_to_send.append({
-                    "student_email": student_info["email"],
-                    "student_id": sid,
-                    "cycle_length": cycle_length,
-                    "giver_whatsapp": giver_info["whatsapp"],
-                    "taker_whatsapp": taker_info["whatsapp"],
-                    "my_slot": student_info["current_tutorial"],
-                    "partner_slot": partner_slot,
-                    "token": personal_token
-                })
+                # --- NEW LOGIC: Determine who does the Double Switch ---
+                if cycle_length == 2:
+                    partner_id = cycle[(idx + 1) % 2]
+                    partner_info = next(s for s in students_data if s["student_id"] == partner_id)
+                    emails_to_send.append({
+                        "student_email": student_info["email"],
+                        "student_id": sid,
+                        "swap_type": "standard",
+                        "partner_whatsapp": partner_info["whatsapp"],
+                        "my_slot": student_info["current_tutorial"],
+                        "partner_slot": partner_slot,
+                        "token": personal_token
+                    })
+                    
+                elif cycle_length == 3:
+                    if idx == 0:
+                        # INDEX 0 is the PIVOT: They do the Double Switch
+                        step1_id = cycle[2] # Person holding the intermediate slot
+                        step2_id = cycle[1] # Person holding the final goal slot
+                        step1_info = next(s for s in students_data if s["student_id"] == step1_id)
+                        step2_info = next(s for s in students_data if s["student_id"] == step2_id)
+                        
+                        emails_to_send.append({
+                            "student_email": student_info["email"],
+                            "student_id": sid,
+                            "swap_type": "double-switch",
+                            "step1_whatsapp": step1_info["whatsapp"],
+                            "step2_whatsapp": step2_info["whatsapp"],
+                            "step1_slot": step1_info["current_tutorial"], 
+                            "my_slot": student_info["current_tutorial"],
+                            "partner_slot": partner_slot,
+                            "token": personal_token
+                        })
+                    else:
+                        # INDEX 1 and 2 just do a normal direct swap with the PIVOT (Index 0)
+                        pivot_id = cycle[0]
+                        pivot_info = next(s for s in students_data if s["student_id"] == pivot_id)
+                        
+                        emails_to_send.append({
+                            "student_email": student_info["email"],
+                            "student_id": sid,
+                            "swap_type": "standard",
+                            "partner_whatsapp": pivot_info["whatsapp"],
+                            "my_slot": student_info["current_tutorial"],
+                            "partner_slot": partner_slot,
+                            "token": personal_token
+                        })
                 
         conn.commit()
         print("Database updated. Firing email engine...")
