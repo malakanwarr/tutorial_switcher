@@ -17,17 +17,20 @@ def build_partitions(students):
     return partitions
 
 def build_graph(students):
-    """Builds a directed graph of desired tutorials."""
+    """Builds a directed graph of desired tutorials, STRICTLY maintaining priority order."""
     by_tutorial = defaultdict(list)
     for s in students:
         by_tutorial[s["current_tutorial"]].append(s["student_id"])
 
-    graph = defaultdict(set)
+    # Changed from 'set' to 'list' so it remembers priority!
+    graph = defaultdict(list) 
     for s in students:
+        seen_holders = set()
         for wanted_tutorial in s["desired_tutorials"]:
             for holder_id in by_tutorial.get(wanted_tutorial, []):
-                if holder_id != s["student_id"]:
-                    graph[s["student_id"]].add(holder_id)
+                if holder_id != s["student_id"] and holder_id not in seen_holders:
+                    graph[s["student_id"]].append(holder_id)
+                    seen_holders.add(holder_id)
     return graph
 
 def find_cycles(graph):
