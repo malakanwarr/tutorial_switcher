@@ -60,9 +60,9 @@ def send_match_emails(matches_data):
                 <p style="font-size: 14px; color: #64748b;"><strong>IMPORTANT:</strong> Message your partner on WhatsApp to confirm. Once you both agree, please update the system using the buttons below:</p>
                 
                 <div style="text-align: center; margin-top: 25px;">
-                  <a href="http://127.0.0.1:8000/confirm-swap?token={match['token']}" style="background-color: #4ade80; color: white; padding: 14px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; margin-bottom: 10px; width: 80%; box-sizing: border-box;">✅ Swap Successful (Done)</a>
-                  <br>
-                  <a href="http://127.0.0.1:8000/flake-swap?token={match['token']}" style="background-color: #f87171; color: white; padding: 14px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; width: 80%; box-sizing: border-box;">❌ Partner Flaked (Cancel)</a>
+                  <a href="https://tutorial-switcher.vercel.app/confirm-swap?token={match['token']}" style="background-color: #4ade80; color: white; padding: 14px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; margin-bottom: 10px; width: 80%; box-sizing: border-box;">✅ Swap Successful (Done)</a>
+<br>
+<a href="https://tutorial-switcher.vercel.app/flake-swap?token={match['token']}" style="background-color: #f87171; color: white; padding: 14px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; width: 80%; box-sizing: border-box;">❌ Partner Flaked (Cancel)</a>
                 </div>
               </div>
             </div>
