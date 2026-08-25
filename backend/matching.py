@@ -145,8 +145,9 @@ def run_matching_engine():
         # 1. Fetch all unmatched students WITH language levels
         cursor.execute("""
             SELECT student_id, university_email, whatsapp_number, major, semester, 
-                   current_tutorial, english_level, german_level 
+            current_tutorial, english_level, german_level 
             FROM students WHERE is_matched = FALSE
+            ORDER BY created_at ASC
         """)
         unmatched_rows = cursor.fetchall()
         
