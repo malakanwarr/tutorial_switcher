@@ -59,6 +59,21 @@ def find_cycles(graph):
                         cycles.append((start, b, c))
     return cycles
 
+def get_cycle_score(cycle, student_by_id):
+    """Calculates the 'happiness' score of a cycle based on preferences. Lower is better."""
+    score = 0
+    n = len(cycle)
+    for i, sid in enumerate(cycle):
+        student = student_by_id[sid]
+        # Look at the tutorial the next person in the cycle is holding
+        target_tutorial = student_by_id[cycle[(i + 1) % n]]["current_tutorial"]
+        try:
+            # .index() finds where it ranks (0 = 1st choice, 1 = 2nd choice, etc.)
+            score += student["desired_tutorials"].index(target_tutorial)
+        except ValueError:
+            score += 99 # Fallback safety
+    return score
+
 def resolve_matches(students):
     """Runs the full pipeline and returns matched groups."""
     partitions = build_partitions(students)
@@ -67,10 +82,16 @@ def resolve_matches(students):
     for _, group in partitions.items():
         graph = build_graph(group)
         cycles = find_cycles(graph)
-        cycles.sort(key=len) # Prioritize 2-way over 3-way
+        
+        # MOVED UP: We need to know who the students are before we can grade their happiness
+        student_by_id = {s["student_id"]: s for s in group}
+        
+        # NEW SORTING LOGIC: 
+        # 1st priority: Shortest length (2-way over 3-way)
+        # 2nd priority: Lowest preference score (1st choices beat 3rd choices)
+        cycles.sort(key=lambda c: (len(c), get_cycle_score(c, student_by_id)))
 
         matched_ids = set()
-        student_by_id = {s["student_id"]: s for s in group}
 
         for cycle in cycles:
             if any(sid in matched_ids for sid in cycle):
