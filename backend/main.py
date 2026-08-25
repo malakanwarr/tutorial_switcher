@@ -318,26 +318,33 @@ def flake_swap(token: str):
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT match_group_id, student_id FROM matches WHERE token = %s", (token,))
+        # 1. Find the group ID associated with this token
+        cursor.execute("SELECT match_group_id FROM matches WHERE token = %s", (token,))
         match = cursor.fetchone()
         
         if not match:
-            return render_status_page("Invalid Link", "This link is invalid or has already been used.", is_success=False)
+            return render_status_page("Invalid Link", "This link is invalid or the match has already been cancelled.", is_success=False)
             
         match_group_id = match[0]
-        flaker_id = match[1]
         
-        cursor.execute("UPDATE matches SET status = 'flaked' WHERE token = %s", (token,))
+        # 2. Mark the ENTIRE group's match as 'cancelled' (This triggers the Blacklist!)
+        cursor.execute("UPDATE matches SET status = 'cancelled' WHERE match_group_id = %s", (match_group_id,))
+        
+        # 3. Free EVERYONE in that group back into the pool instantly (No exclusions!)
         cursor.execute("""
             UPDATE students 
             SET is_matched = FALSE 
             WHERE student_id IN (
-                SELECT student_id FROM matches WHERE match_group_id = %s AND student_id != %s
+                SELECT student_id FROM matches WHERE match_group_id = %s
             )
-        """, (match_group_id, flaker_id))
+        """, (match_group_id,))
         
         conn.commit()
-        return render_status_page("Swap Cancelled", "You have cancelled this match. The other student(s) have been safely returned to the active matching pool.", is_success=False)
+        return render_status_page(
+            "Swap Cancelled 🛑", 
+            "You have cancelled this match. Everyone involved has been safely returned to the active matching pool, and the system will not attempt to pair you with this group again.", 
+            is_success=False
+        )
         
     except Exception as e:
         conn.rollback()

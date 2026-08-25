@@ -16,8 +16,8 @@ def build_partitions(students):
         partitions[key].append(s)
     return partitions
 
-def build_graph(students):
-    """Builds a directed graph of desired tutorials, STRICTLY maintaining priority order."""
+def build_graph(students, blacklisted_pairs):
+    """Builds a directed graph of desired tutorials, STRICTLY maintaining priority order and ignoring blacklists."""
     by_tutorial = defaultdict(list)
     for s in students:
         by_tutorial[s["current_tutorial"]].append(s["student_id"])
@@ -29,6 +29,11 @@ def build_graph(students):
         for wanted_tutorial in s["desired_tutorials"]:
             for holder_id in by_tutorial.get(wanted_tutorial, []):
                 if holder_id != s["student_id"] and holder_id not in seen_holders:
+                    
+                    # --- NEW SHIELD: Ignore previously failed pairings ---
+                    if frozenset([s["student_id"], holder_id]) in blacklisted_pairs:
+                        continue 
+                        
                     graph[s["student_id"]].append(holder_id)
                     seen_holders.add(holder_id)
     return graph
@@ -74,19 +79,19 @@ def get_cycle_score(cycle, student_by_id):
             score += 99 # Fallback safety
     return score
 
-def resolve_matches(students):
+def resolve_matches(students, blacklisted_pairs):
     """Runs the full pipeline and returns matched groups."""
     partitions = build_partitions(students)
     all_matches = []
 
     for _, group in partitions.items():
-        graph = build_graph(group)
+        graph = build_graph(group, blacklisted_pairs)
         cycles = find_cycles(graph)
         
-        # MOVED UP: We need to know who the students are before we can grade their happiness
+        # We need to know who the students are before we can grade their happiness
         student_by_id = {s["student_id"]: s for s in group}
         
-        # NEW SORTING LOGIC: 
+        # SORTING LOGIC: 
         # 1st priority: Shortest length (2-way over 3-way)
         # 2nd priority: Lowest preference score (1st choices beat 3rd choices)
         cycles.sort(key=lambda c: (len(c), get_cycle_score(c, student_by_id)))
@@ -113,7 +118,6 @@ def resolve_matches(students):
 
 
 # --- 2. THE DATABASE PIPELINE ---
-
 
 def cleanup_ghost_matches(hours_to_wait=24):
     """Finds pending matches older than the time limit, dissolves them, and returns everyone to the pool."""
@@ -163,6 +167,16 @@ def run_matching_engine():
         # Sweep for ghosts BEFORE looking for new matches
         cleanup_ghost_matches(hours_to_wait=3)
         
+        # --- NEW: Fetch Blacklisted Pairs (People who flaked on each other) ---
+        cursor.execute("""
+            SELECT m1.student_id, m2.student_id
+            FROM matches m1
+            JOIN matches m2 ON m1.match_group_id = m2.match_group_id
+            WHERE m1.status = 'cancelled' AND m1.student_id != m2.student_id
+        """)
+        # Creates a set of unordered pairs like { frozenset({'99-123', '99-456'}) }
+        blacklisted_pairs = {frozenset([row[0], row[1]]) for row in cursor.fetchall()}
+        
         # 1. Fetch all unmatched students WITH language levels
         cursor.execute("""
             SELECT student_id, university_email, whatsapp_number, major, semester, 
@@ -197,8 +211,8 @@ def run_matching_engine():
                 "desired_tutorials": desired
             })
 
-        # 3. Run the Algorithm
-        matches = resolve_matches(students_data)
+        # 3. Run the Algorithm, passing in the blacklisted pairs
+        matches = resolve_matches(students_data, blacklisted_pairs)
         if not matches:
             print("No matches found during this run.")
             return
@@ -227,7 +241,7 @@ def run_matching_engine():
                 # Mark as matched
                 cursor.execute("UPDATE students SET is_matched = TRUE WHERE student_id = %s", (sid,))
                 
-                # --- NEW LOGIC: Determine who does the Double Switch ---
+                # --- Determine who does the Double Switch ---
                 if cycle_length == 2:
                     partner_id = cycle[(idx + 1) % 2]
                     partner_info = next(s for s in students_data if s["student_id"] == partner_id)
