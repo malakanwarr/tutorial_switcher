@@ -33,25 +33,15 @@ class GUCSwitcherLoadTest(HttpUser):
         self.email = f"fake_{uuid.uuid4().hex[:6]}@student.guc.edu.eg"
         self.whatsapp = f"+2010{random.randint(10000000, 99999999)}"
         self.batch = "61"
-        self.semester = random.randint(1, 10)
         
-        # Match the frontend dynamic dropdown logic exactly
-        if self.semester <= 2:
-            self.major = random.choice(GENERAL_GROUPS)
-        elif self.semester <= 4:
-            self.major = random.choice(FACULTIES)
-        else:
-            self.major = random.choice(SPECIFIC_MAJORS)
-
-        # Match the frontend language requirement logic
-        self.requires_lang_match = self.semester <= 4
-        if self.requires_lang_match:
-            self.english_level = random.choice(["AE", "AS", "SM", "CPS", "RPW"])
-            self.german_level = random.choice(["DE1", "DE2", "DE3", "DE4"])
-        else:
-            self.english_level = None
-            self.german_level = None
+        # --- HARDCODE EVERYONE INTO THE EXACT SAME BUCKET ---
+        self.semester = 7
+        self.major = "Computer Science and Engineering (CSEN)"
+        self.requires_lang_match = False
+        self.english_level = None
+        self.german_level = None
         
+        # (Keep the tutorials logic the exact same)
         all_tutorials = list(range(1, 35))
         self.current_tutorial = random.choice(all_tutorials)
         
