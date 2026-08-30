@@ -1,0 +1,1098 @@
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Exception ignored in running getpath:
+Traceback (most recent call last):
+  File "<frozen getpath>", line 357, in <module>
+InterruptedError: [Errno 4] Interrupted system call
+Fatal Python error: error evaluating path
+Python runtime state: core initialized
+
+Current thread 0x0000000203d88840 (most recent call first):
+  <no Python frame>
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1176, in exec_module
+  File "<frozen site>", line 716, in <module>
+  File "<frozen site>", line 699, in main
+  File "<frozen site>", line 617, in venv
+PermissionError: [Errno 1] Operation not permitted: '/Users/malakamr/Desktop/tutorial_switcher/.venv/pyvenv.cfg'
