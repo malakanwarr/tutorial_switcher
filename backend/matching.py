@@ -22,18 +22,17 @@ def build_graph(students, blacklisted_pairs):
     for s in students:
         by_tutorial[s["current_tutorial"]].append(s["student_id"])
 
-    # Changed from 'set' to 'list' so it remembers priority!
-    graph = defaultdict(list) 
+    graph = defaultdict(list)
     for s in students:
         seen_holders = set()
         for wanted_tutorial in s["desired_tutorials"]:
             for holder_id in by_tutorial.get(wanted_tutorial, []):
                 if holder_id != s["student_id"] and holder_id not in seen_holders:
-                    
-                    # --- NEW SHIELD: Ignore previously failed pairings ---
+
+                    # --- SHIELD: Ignore previously failed pairings ---
                     if frozenset([s["student_id"], holder_id]) in blacklisted_pairs:
-                        continue 
-                        
+                        continue
+
                     graph[s["student_id"]].append(holder_id)
                     seen_holders.add(holder_id)
     return graph
@@ -70,13 +69,11 @@ def get_cycle_score(cycle, student_by_id):
     n = len(cycle)
     for i, sid in enumerate(cycle):
         student = student_by_id[sid]
-        # Look at the tutorial the next person in the cycle is holding
         target_tutorial = student_by_id[cycle[(i + 1) % n]]["current_tutorial"]
         try:
-            # .index() finds where it ranks (0 = 1st choice, 1 = 2nd choice, etc.)
             score += student["desired_tutorials"].index(target_tutorial)
         except ValueError:
-            score += 99 # Fallback safety
+            score += 99
     return score
 
 def resolve_matches(students, blacklisted_pairs):
@@ -87,13 +84,11 @@ def resolve_matches(students, blacklisted_pairs):
     for _, group in partitions.items():
         graph = build_graph(group, blacklisted_pairs)
         cycles = find_cycles(graph)
-        
-        # We need to know who the students are before we can grade their happiness
+
         student_by_id = {s["student_id"]: s for s in group}
-        
-        # SORTING LOGIC: 
-        # 1st priority: Shortest length (2-way over 3-way)
-        # 2nd priority: Lowest preference score (1st choices beat 3rd choices)
+
+        # 1st priority: shortest length (2-way over 3-way)
+        # 2nd priority: lowest preference score (1st choices beat 3rd choices)
         cycles.sort(key=lambda c: (len(c), get_cycle_score(c, student_by_id)))
 
         matched_ids = set()
@@ -124,22 +119,18 @@ def cleanup_ghost_matches(hours_to_wait=24):
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        # 1. Find match groups that are still pending after the time limit
         cursor.execute(f"""
             SELECT DISTINCT match_group_id 
             FROM matches 
             WHERE status = 'pending' 
             AND created_at < NOW() - INTERVAL '{hours_to_wait} hours'
         """)
-        
+
         expired_groups = [row[0] for row in cursor.fetchall()]
-        
+
         if expired_groups:
             for group_id in expired_groups:
-                # 2. Mark the match as expired
                 cursor.execute("UPDATE matches SET status = 'expired' WHERE match_group_id = %s", (group_id,))
-                
-                # 3. Return EVERYONE in this group safely back to the pool (no penalties)
                 cursor.execute("""
                     UPDATE students 
                     SET is_matched = FALSE 
@@ -147,10 +138,10 @@ def cleanup_ghost_matches(hours_to_wait=24):
                         SELECT student_id FROM matches WHERE match_group_id = %s
                     )
                 """, (group_id,))
-            
+
             conn.commit()
-            print(f"🧹 Cleaned up {len(expired_groups)} ghosted matches and returned students to the pool.")
-            
+            print(f"Cleaned up {len(expired_groups)} ghosted matches and returned students to the pool.")
+
     except Exception as e:
         conn.rollback()
         print(f"Error during ghost cleanup: {e}")
@@ -162,22 +153,25 @@ def cleanup_ghost_matches(hours_to_wait=24):
 def run_matching_engine():
     conn = get_db_connection()
     cursor = conn.cursor()
-    
+
     try:
-        # Sweep for ghosts BEFORE looking for new matches
-        cleanup_ghost_matches(hours_to_wait=3)
-        
-        # --- NEW: Fetch Blacklisted Pairs (People who flaked on each other) ---
+        # FIX 1: restored to 24 hours — students get a full day before a
+        # match dissolves, instead of 3 hours.
+        cleanup_ghost_matches(hours_to_wait=24)
+
+        # FIX 2: 'expired' added alongside 'cancelled'. Without this, a
+        # match that dissolves from timeout (not an explicit flake click)
+        # was never blacklisted, so the same two students could be
+        # instantly re-matched with each other in the very next run —
+        # this was the actual cause of the repeated identical emails.
         cursor.execute("""
             SELECT m1.student_id, m2.student_id
             FROM matches m1
             JOIN matches m2 ON m1.match_group_id = m2.match_group_id
-            WHERE m1.status = 'cancelled' AND m1.student_id != m2.student_id
+            WHERE m1.status IN ('cancelled', 'expired') AND m1.student_id != m2.student_id
         """)
-        # Creates a set of unordered pairs like { frozenset({'99-123', '99-456'}) }
         blacklisted_pairs = {frozenset([row[0], row[1]]) for row in cursor.fetchall()}
-        
-        # 1. Fetch all unmatched students WITH language levels
+
         cursor.execute("""
             SELECT student_id, university_email, whatsapp_number, major, semester, 
             current_tutorial, english_level, german_level, batch 
@@ -185,63 +179,56 @@ def run_matching_engine():
             ORDER BY created_at ASC
         """)
         unmatched_rows = cursor.fetchall()
-        
+
         if not unmatched_rows:
             print("No unmatched students in the pool.")
             return
 
-        # 2. Fetch their desired slots IN ORDER OF PRIORITY
         students_data = []
         for row in unmatched_rows:
             student_id = row[0]
-            # Notice the ORDER BY priority ASC here!
             cursor.execute("SELECT tutorial_id FROM desired_slots WHERE student_id = %s ORDER BY priority ASC", (student_id,))
             desired = [r[0] for r in cursor.fetchall()]
-            
+
             students_data.append({
                 "student_id": student_id,
                 "email": row[1],
                 "whatsapp": row[2],
                 "major": row[3],
                 "semester": row[4],
-                "batch": row[8], 
+                "batch": row[8],
                 "current_tutorial": row[5],
                 "english_level": row[6],
                 "german_level": row[7],
                 "desired_tutorials": desired
             })
 
-        # 3. Run the Algorithm, passing in the blacklisted pairs
         matches = resolve_matches(students_data, blacklisted_pairs)
         if not matches:
             print("No matches found during this run.")
             return
-            
+
         print(f"Found {len(matches)} successful match loops!")
 
-       # 4. Process each match loop
         emails_to_send = []
-        
+
         for match in matches:
-            match_group_id = f"GROUP-{str(uuid.uuid4())[:8]}" # Unique ID for this specific trade
+            match_group_id = f"GROUP-{str(uuid.uuid4())[:8]}"
             cycle = match["student_ids"]
             cycle_length = len(cycle)
-            
+
             for idx, sid in enumerate(cycle):
                 student_info = next(s for s in students_data if s["student_id"] == sid)
                 partner_slot = match["slot_assignment"][sid]
                 personal_token = str(uuid.uuid4())
-                
-                # Save to database
+
                 cursor.execute("""
                     INSERT INTO matches (match_group_id, student_id, token, status)
                     VALUES (%s, %s, %s, 'pending')
                 """, (match_group_id, sid, personal_token))
-                
-                # Mark as matched
+
                 cursor.execute("UPDATE students SET is_matched = TRUE WHERE student_id = %s", (sid,))
-                
-                # --- Determine who does the Double Switch ---
+
                 if cycle_length == 2:
                     partner_id = cycle[(idx + 1) % 2]
                     partner_info = next(s for s in students_data if s["student_id"] == partner_id)
@@ -254,31 +241,29 @@ def run_matching_engine():
                         "partner_slot": partner_slot,
                         "token": personal_token
                     })
-                    
+
                 elif cycle_length == 3:
                     if idx == 0:
-                        # INDEX 0 is the PIVOT: They do the Double Switch
-                        step1_id = cycle[2] # Person holding the intermediate slot
-                        step2_id = cycle[1] # Person holding the final goal slot
+                        step1_id = cycle[2]
+                        step2_id = cycle[1]
                         step1_info = next(s for s in students_data if s["student_id"] == step1_id)
                         step2_info = next(s for s in students_data if s["student_id"] == step2_id)
-                        
+
                         emails_to_send.append({
                             "student_email": student_info["email"],
                             "student_id": sid,
                             "swap_type": "double-switch",
                             "step1_whatsapp": step1_info["whatsapp"],
                             "step2_whatsapp": step2_info["whatsapp"],
-                            "step1_slot": step1_info["current_tutorial"], 
+                            "step1_slot": step1_info["current_tutorial"],
                             "my_slot": student_info["current_tutorial"],
                             "partner_slot": partner_slot,
                             "token": personal_token
                         })
                     else:
-                        # INDEX 1 and 2 just do a normal direct swap with the PIVOT (Index 0)
                         pivot_id = cycle[0]
                         pivot_info = next(s for s in students_data if s["student_id"] == pivot_id)
-                        
+
                         emails_to_send.append({
                             "student_email": student_info["email"],
                             "student_id": sid,
@@ -288,13 +273,12 @@ def run_matching_engine():
                             "partner_slot": partner_slot,
                             "token": personal_token
                         })
-                
+
         conn.commit()
         print("Database updated. Firing email engine...")
-        
-        # 5. Send the notifications
+
         send_match_emails(emails_to_send)
-        
+
     except Exception as e:
         conn.rollback()
         print(f"Error during matching run: {e}")
