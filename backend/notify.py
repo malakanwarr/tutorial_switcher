@@ -40,14 +40,11 @@ def send_match_emails(matches_data):
         if match['swap_type'] == "standard":
             whatsapp_section = f"""
             <p style="font-size: 16px;"><strong>Your Match's WhatsApp:</strong> <a href="https://wa.me/{match['partner_whatsapp'].replace('+', '')}" style="color: #6366f1; text-decoration: none; font-weight: bold;">{match['partner_whatsapp']}</a></p>
-            <div style="background-color: #fff3cd; color: #856404; padding: 12px; border-radius: 5px; margin: 15px 0; border-left: 5px solid #ffeeba; font-size: 14px;">
-                <strong>⚠️ IMPORTANT:</strong> Message your partner immediately. <strong>If they mention this is a 3-way swap</strong>, make sure to coordinate who drops their tutorial first so nobody loses their slot!
-            </div>
             """
         elif match['swap_type'] == "double-switch":
             whatsapp_section = f"""
             <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 15px; margin: 20px 0;">
-                <p style="margin-top: 0; font-size: 15px; font-weight: bold; color: #b45309;">🔄 Double Switch Required! (3-Way Swap)</p>
+                <p style="margin-top: 0; font-size: 15px; font-weight: bold; color: #b45309;">🔄 Double Switch Required!</p>
                 <p style="font-size: 14px; color: #b45309;">You are the bridge! You must do two quick swaps. <strong>Create a WhatsApp group with both students below to coordinate the order before dropping anything!</strong></p>
                 <ol style="font-size: 14px; color: #b45309; padding-left: 20px; line-height: 1.5;">
                     <li><strong>Step 1:</strong> Swap Tutorial {match['my_slot']} for Tutorial {match['step1_slot']} with:<br><a href="https://wa.me/{match['step1_whatsapp'].replace('+', '')}" style="font-weight: bold; color: #b45309;">{match['step1_whatsapp']}</a></li>
