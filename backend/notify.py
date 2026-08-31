@@ -40,9 +40,7 @@ def send_match_emails(matches_data):
         if match['swap_type'] == "standard":
             whatsapp_section = f"""
             <p style="font-size: 16px;"><strong>Your Match's WhatsApp:</strong> <a href="https://wa.me/{match['partner_whatsapp'].replace('+', '')}" style="color: #6366f1; text-decoration: none; font-weight: bold;">{match['partner_whatsapp']}</a></p>
-            <div style="background-color: #fff3cd; color: #856404; padding: 12px; border-radius: 5px; margin: 15px 0; border-left: 5px solid #ffeeba; font-size: 14px;">
-                <strong>⚠️ IMPORTANT:</strong> Message your partner on WhatsApp to confirm the swap on the university portal.
-            </div>
+            <p style="font-size: 14px; color: #4b5563; margin-top: 15px;"><strong>IMPORTANT:</strong> Message your partner on WhatsApp to confirm the swap on the university portal.</p>
             """
         elif match['swap_type'] == "double-switch":
             whatsapp_section = f"""
