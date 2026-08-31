@@ -36,10 +36,13 @@ def send_match_emails(matches_data):
         msg["From"] = SENDER_EMAIL
         msg["To"] = recipient
 
-        # Dynamic section based on Pivot role
+      # Dynamic section based on Pivot role
         if match['swap_type'] == "standard":
             whatsapp_section = f"""
             <p style="font-size: 16px;"><strong>Your Match's WhatsApp:</strong> <a href="https://wa.me/{match['partner_whatsapp'].replace('+', '')}" style="color: #6366f1; text-decoration: none; font-weight: bold;">{match['partner_whatsapp']}</a></p>
+            <div style="background-color: #fff3cd; color: #856404; padding: 12px; border-radius: 5px; margin: 15px 0; border-left: 5px solid #ffeeba; font-size: 14px;">
+                <strong>⚠️ IMPORTANT:</strong> Message your partner on WhatsApp to confirm the swap on the university portal.
+            </div>
             """
         elif match['swap_type'] == "double-switch":
             whatsapp_section = f"""
@@ -50,6 +53,7 @@ def send_match_emails(matches_data):
                     <li><strong>Step 1:</strong> Swap Tutorial {match['my_slot']} for Tutorial {match['step1_slot']} with:<br><a href="https://wa.me/{match['step1_whatsapp'].replace('+', '')}" style="font-weight: bold; color: #b45309;">{match['step1_whatsapp']}</a></li>
                     <li style="margin-top: 10px;"><strong>Step 2:</strong> Swap Tutorial {match['step1_slot']} for your goal Tutorial {match['partner_slot']} with:<br><a href="https://wa.me/{match['step2_whatsapp'].replace('+', '')}" style="font-weight: bold; color: #b45309;">{match['step2_whatsapp']}</a></li>
                 </ol>
+                <p style="font-size: 14px; color: #b45309; margin-bottom: 0;"><strong>⚠️ IMPORTANT:</strong> Message your partners on WhatsApp to confirm the swaps on the university portal.</p>
             </div>
             """
 
