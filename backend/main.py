@@ -179,7 +179,7 @@ def get_status(request: StatusRequest):
             "in_pool": True,
             "students_wanting_your_slot": students_wanting_your_slot,
             "breakdown": preference_breakdown, # We send the breakdown list to the frontend
-            "message": f"You're in the pool! {students_wanting_your_slot} total student(s) want your current slot."
+            "message": f"You're in the pool! We are actively searching for a match. Keep an eye on your email."
         }
 
     

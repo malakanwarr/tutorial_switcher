@@ -387,31 +387,14 @@
                 resultDiv.style.display = 'block';
 
                 if (response.ok) {
-                    // Success! Show the main message & preference breakdown list
                     let htmlContent = '';
-if (data.in_pool) {
-    htmlContent = `
-    <div style="background-color: #dbeafe; color: #1e3a8a; padding: 12px; border-radius: 8px; font-weight: 500; display: inline-block; margin-bottom: 20px; border: 1px solid #bfdbfe;">
-        ${data.message}
-    </div>`;
-} else {
-    // For when they are matched (green text)
-    htmlContent = `<span style="font-size: 2rem;">🎉</span><br><br><span style="color: #4ade80; font-weight: bold; font-size: 1.1rem;">${data.message}</span>`;
-}
                     
-                    if (data.breakdown && data.breakdown.length > 0) {
-                        htmlContent += `<div style="margin-top: 20px; text-align: left; background: rgba(15, 23, 42, 0.4); padding: 15px; border-radius: 10px;">`;
-                        htmlContent += `<p style="margin-top: 0; color: #cbd5e1; font-weight: 600; font-size: 0.9rem; text-align: center;">Swap Potential (Based on your choices):</p>`;
-                        
-                        data.breakdown.forEach((item, index) => {
-                            let color = item.demand > 0 ? '#4ade80' : '#f87171'; // Green if matches exist, Red if 0
-                            htmlContent += `
-                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                                <span>Choice ${index + 1} (Tut ${item.tutorial})</span>
-                                <span style="color: ${color}; font-weight: bold;">${item.demand} match(es) available</span>
-                            </div>`;
-                        });
-                        htmlContent += `</div>`;
+                    if (data.in_pool) {
+                        // Plain text instead of the blue box
+                        htmlContent = `<p style="font-size: 16px; color: #cbd5e1; text-align: center; margin-top: 10px; font-weight: 500;">${data.message}</p>`;
+                    } else {
+                        // For when they are matched (green text)
+                        htmlContent = `<span style="font-size: 2rem;">🎉</span><br><br><span style="color: #4ade80; font-weight: bold; font-size: 1.1rem;">${data.message}</span>`;
                     }
                     
                     resultDiv.innerHTML = htmlContent;
