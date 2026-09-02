@@ -242,7 +242,7 @@ def update_contact(req: UpdateContactRequest):
     cur = conn.cursor()
     try:
         # 1. Verify the student exists and the current email matches (Security check)
-        cur.execute("SELECT id FROM students WHERE student_id = %s AND university_email = %s", 
+        cur.execute("SELECT student_id FROM students WHERE student_id = %s AND university_email = %s", 
                     (req.student_id, req.current_email))
         if not cur.fetchone():
             raise HTTPException(status_code=404, detail="Student not found or incorrect current email.")
